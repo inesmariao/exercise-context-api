@@ -8,7 +8,7 @@ export const Home = () => {
   return (
     <div>
       <h1>Página de Inicio</h1>
-      <p>Hola Bienvenid@ <strong>{contextShare}</strong>, a mi tienda!!</p>
+      <p>Hola Bienvenid@ <strong>{contextShare.name}</strong>, a mi tienda!!</p>
     </div>
   )
 }
