@@ -3,7 +3,7 @@ import './../styles/error-page.css';
 
 export const ErrorPage = () => {
   return (
-    <body className='custom-body'>
+    <body className='custom-body-class'>
       <section id="not-found">
         <div id="title">Error404</div>
         <div className="circles">

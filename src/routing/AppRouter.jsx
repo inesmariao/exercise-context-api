@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
 import { Home } from '../components/Home'
 import { Articles } from '../components/Articles'
 import { About } from '../components/About'
@@ -11,6 +11,25 @@ export const AppRouter = () => {
   return (
     <Router>
       {/* Menú de navegación */}
+      <nav>
+        <ul>
+          <li>
+            <NavLink to='/'>Inicio</NavLink>
+          </li>
+          <li>
+            <NavLink to='/articulos'>Articulos</NavLink>
+          </li>
+          <li>
+            <NavLink to='/acerca-de'>Acerca de</NavLink>
+          </li>
+          <li>
+            <NavLink to='/contacto'>Contacto</NavLink>
+          </li>
+          <li>
+            <NavLink to='/login'>Identifícate</NavLink>
+          </li>
+        </ul>
+      </nav>
 
       {/* Configurar las rutas */}
       <Routes>
