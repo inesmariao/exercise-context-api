@@ -20,7 +20,7 @@ body {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  flex-basis: 75%;
+  flex-basis: 100%;
 }
 
 .header-nav a{
