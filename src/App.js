@@ -1,12 +1,13 @@
 import './App.css';
+import { Context } from './context/Context';
 import { AppRouter } from './routing/AppRouter';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <AppRouter />
-      </header>
+        <Context.Provider value='Inés María O.'>
+          <AppRouter />
+        </Context.Provider>
     </div>
   );
 }

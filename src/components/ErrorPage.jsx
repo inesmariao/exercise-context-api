@@ -3,18 +3,19 @@ import './../styles/error-page.css';
 
 export const ErrorPage = () => {
   return (
-    <body className='custom-body-class'>
+    <div id="custom-body-class">
       <section id="not-found">
-        <div id="title">Error404</div>
+        <div id="title">404 Error Page</div>
         <div className="circles">
-          <p>404<br/>
-          <small><strong>Ocurrió un ERROR página no encontrada</strong></small>
+          <p>404<br />
+            <small>Página no encontrada</small>
           </p>
           <span className="circle big"></span>
           <span className="circle med"></span>
           <span className="circle small"></span>
         </div>
       </section>
-    </body>
+    </div>
+
   )
 }
