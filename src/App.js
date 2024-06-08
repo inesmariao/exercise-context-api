@@ -1,20 +1,19 @@
+import { useState } from 'react';
 import './App.css';
 import { Context } from './context/Context';
 import { AppRouter } from './routing/AppRouter';
 
 function App() {
 
-  const clients = {
-    id: 100,
-    name: 'Catalina',
-    last_name: 'Oliveros',
-    phone: '300000000',
-    city: 'Duitama'
-  }
+  const [user, setUser] = useState({
+    username: '@inesmaria',
+    name: 'Inés Oliveros',
+    phone: '30056756756'
+  });
 
   return (
     <div className="App">
-        <Context.Provider value={clients}>
+        <Context.Provider value={{user, setUser}}>
           <AppRouter />
         </Context.Provider>
     </div>

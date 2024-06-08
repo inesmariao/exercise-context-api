@@ -8,7 +8,7 @@ export const Articles = () => {
   return (
     <div>
       <h1>Página de Artículos</h1>
-      <p>Comprador: {nameContextArt.name} {nameContextArt.last_name}</p>
+      <p>Comprador: {nameContextArt.user.name}</p>
   </div>
   )
 }

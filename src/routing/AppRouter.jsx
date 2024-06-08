@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
 import { Home } from '../components/Home'
 import { Articles } from '../components/Articles'
@@ -6,15 +6,21 @@ import { About } from '../components/About'
 import { Contact } from '../components/Contact'
 import { Login } from '../components/Login'
 import { ErrorPage } from '../components/ErrorPage'
+import { Context } from '../context/Context'
+import logo from '../assets/logo.png'
 
 export const AppRouter = () => {
+
+  const {user, setUser} = useContext(Context);
+
+
   return (
     <Router>
       {/* Menú de navegación */}
       <header className='header-nav'>
         <nav>
           <div className='logo'>
-            <h2>LOGO</h2>
+            <img src={logo} alt="logo" className='logo-img'/>
           </div>
           <ul>
             <li>
@@ -29,9 +35,20 @@ export const AppRouter = () => {
             <li>
               <NavLink to='/contacto'>Contacto</NavLink>
             </li>
-            <li>
-              <NavLink to='/login'>Identifícate</NavLink>
-            </li>
+              {user.hasOwnProperty("username") && user.username !== null ?
+                (
+                  <>
+                    <li><NavLink to='/login'>{user.username}</NavLink></li>
+                    <li><a href='/' onClick={ e => {
+                      e.preventDefault();
+                      setUser({});
+                    }}>Cerrar Sesión</a></li>
+                  </>
+                ) :
+                (
+                  <li><NavLink to='/login'>Identifícate</NavLink></li>
+                )
+              }
           </ul>
         </nav>
       </header>
