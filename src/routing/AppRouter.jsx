@@ -8,6 +8,7 @@ import { Login } from '../components/Login'
 import { ErrorPage } from '../components/ErrorPage'
 import { Context } from '../context/Context'
 import logo from '../assets/logo.png'
+import { DetailArticle } from '../components/DetailArticle'
 
 export const AppRouter = () => {
 
@@ -59,6 +60,7 @@ export const AppRouter = () => {
           <Route path='/' element={<Home />}></Route>
           <Route path='/inicio' element={<Home />}></Route>
           <Route path='/articulos' element={<Articles />}></Route>
+          <Route path='/article/:id' element={<DetailArticle />}></Route>
           <Route path='/acerca-de' element={<About />}></Route>
           <Route path='/contacto' element={<Contact />}></Route>
           <Route path='/login' element={<Login />}></Route>
