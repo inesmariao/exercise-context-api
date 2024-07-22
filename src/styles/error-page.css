@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
 
-#custom-body-class {
+.custom-body-class {
   width:80%;
   height:80%;
   background:#48A9E6;
@@ -36,7 +36,6 @@
 	text-align: center;
 	position: relative;
   margin-top:-60px;
-  box-shadow:inset -1px -4px 4px rgba(0,0,0,0.2);
 }
 
 .circles p {
@@ -49,10 +48,10 @@
   font-weight: bold;
 }
 
-.circles p small { 
-  font-size: 40px; 
-  line-height: 100%; 
-  vertical-align: top;   
+.circles p small {
+  font-size: 40px;
+  line-height: 100%;
+  vertical-align: top;
 }
 
 .circles .circle.small {

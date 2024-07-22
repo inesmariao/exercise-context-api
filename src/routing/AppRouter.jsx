@@ -9,6 +9,7 @@ import { ErrorPage } from '../components/ErrorPage'
 import { Context } from '../context/Context'
 import logo from '../assets/logo.png'
 import { DetailArticle } from '../components/DetailArticle'
+import { DarkModeToggle } from "../components/DarkModeToggle";
 
 export const AppRouter = () => {
 
@@ -50,6 +51,9 @@ export const AppRouter = () => {
                   <li><NavLink to='/login'>Identifícate</NavLink></li>
                 )
               }
+            <li>
+              <DarkModeToggle /> {/* Botón de alternancia */}
+            </li>
           </ul>
         </nav>
       </header>
